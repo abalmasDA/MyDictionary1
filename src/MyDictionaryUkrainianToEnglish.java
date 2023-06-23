@@ -1,33 +1,27 @@
 import java.util.ArrayList;
 
-public class MyDictionaryUkrainianToEnglish implements Dictionary {
-
-    private ArrayList<String> ukrainianWords;
-    private ArrayList<String> englishWords;
-
-    private int wordPairCounter;
+public class MyDictionaryUkrainianToEnglish<oneLanguage, twoLanguage> implements Dictionary {
+    private ArrayList<Pairs<oneLanguage, twoLanguage>> dictionaryUkrainianToEnglish;
 
     public MyDictionaryUkrainianToEnglish() {
-        ukrainianWords = new ArrayList<>();
-        englishWords = new ArrayList<>();
-        wordPairCounter = 0;
+        dictionaryUkrainianToEnglish = new ArrayList<>();
     }
 
     @Override
-    public void addingElementToDictionary(String ukrainianWord, String englishWord) {
-        ukrainianWords.add(ukrainianWord);
-        englishWords.add(englishWord);
-        wordPairCounter++;
+    public void addingElementToDictionary(Object ukrainianWord, Object englishWord) {
+        Pairs pairs = new Pairs<>(ukrainianWord, englishWord);
+        dictionaryUkrainianToEnglish.add(pairs);
     }
+
 
     @Override
     public String getElementByIndex(int index) {
-        return ukrainianWords.get(index) + " - " + englishWords.get(index);
+        return dictionaryUkrainianToEnglish.get(index).toString();
     }
 
     @Override
     public int getTotalNumberElement() {
-        return wordPairCounter;
+        return dictionaryUkrainianToEnglish.size();
     }
 
 

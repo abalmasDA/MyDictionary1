@@ -1,6 +1,7 @@
 public interface Dictionary {
 
-    public void addingElementToDictionary(String word1, String word2);
+
+    public void addingElementToDictionary(Object ukrainianWord, Object englishWord);
 
     public String getElementByIndex(int index);
 

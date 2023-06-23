@@ -9,15 +9,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MyDictionaryUkrainianToEnglish ukrainianToEnglish = new MyDictionaryUkrainianToEnglish();
-        ukrainianToEnglish.addingElementToDictionary("Бігати", "Run");
-        ukrainianToEnglish.addingElementToDictionary("Стрибати", "Jump");
-        ukrainianToEnglish.addingElementToDictionary("Ходити", "Walk");
-        ukrainianToEnglish.addingElementToDictionary("Плавати", "Swim");
-        ukrainianToEnglish.addingElementToDictionary("Вчитись", "Learn");
-        ukrainianToEnglish.addingElementToDictionary("Програмувати", "Program");
-        System.out.println(ukrainianToEnglish.getElementByIndex(5));
-        System.out.println(ukrainianToEnglish.getTotalNumberElement());
+        MyDictionaryUkrainianToEnglish myDictionaryUkrainianToEnglish = new MyDictionaryUkrainianToEnglish<>();
+        myDictionaryUkrainianToEnglish.addingElementToDictionary("Бігати", "Run");
+        myDictionaryUkrainianToEnglish.addingElementToDictionary("Стрибати", "Jump");
+        myDictionaryUkrainianToEnglish.addingElementToDictionary("Ходити", "Walk");
+        myDictionaryUkrainianToEnglish.addingElementToDictionary("Бігати", "Run");
+        myDictionaryUkrainianToEnglish.addingElementToDictionary("Плавати", "Swim");
+        myDictionaryUkrainianToEnglish.addingElementToDictionary("Вчитись", "Learn");
+        myDictionaryUkrainianToEnglish.addingElementToDictionary("Програмувати", "Program");
+        System.out.println(myDictionaryUkrainianToEnglish.getElementByIndex(6));
+        System.out.println(myDictionaryUkrainianToEnglish.getTotalNumberElement());
 
 
     }
